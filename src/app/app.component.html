@@ -1,0 +1,21 @@
+<form [formGroup]="inputForm" (ngSubmit)="onSubmit()">
+
+  <div class="form-group">
+ <label for="username">Username:</label>
+ <input formControlName="username" type="text" name="form-control" id="username">
+  </div>
+
+<div class="form-group">
+  <label for="emali">Emali:</label>
+  <input formControlName="emali" type="text" name="form-control" id="emali">
+</div>
+
+<div class="radio" *ngFor="let gender of genders">
+  <label>
+    <input formControlName="gender" type="radio" [value]="gender">{{gender}}
+  </label>
+</div>
+
+<button type="submit" class="btn-primary">Submit</button>
+
+</form>
